@@ -1,0 +1,63 @@
+#####################################################################
+#   GLOW VERSION 1.0                                                #
+#####################################################################
+run_GaMD=0
+run_GaMD_analysis=0
+run_DL_prep=1
+run_2D_CNN=1
+run_DL_analysis=1
+run_2D_FEPs=1
+
+nb_systems=2
+
+#####################################################################
+#   (I) GaMD                                                        #
+#####################################################################
+AMBER=/data/software/amber-git-20201116
+
+workfolder_1=./EXAMPLE/1-a1ar-psb36
+parm_sys_1=a1ar-psb36-sys.parm7
+rst_sys_1=step7_10.rst7
+pdb_sys_1=a1ar-psb36-sys.pdb
+nb_prot_1=4589
+parm_prot_1=a1ar-psb36-pro.parm7
+pdb_prot_1=a1ar-psb36-pro.pdb
+res_idx_1=1-280    # TO KEEP, SEPARATED BY COMMAS
+parm_cmap_1=a1ar-psb36-cmap.parm7
+pdb_cmap_1=a1ar-psb36-cmap.pdb
+traj_cmap_1=a1ar-psb36-cmap.nc
+
+workfolder_2=./EXAMPLE/2-a1ar-ado
+parm_sys_2=a1ar-ado-sys.parm7
+rst_sys_2=step7_10.rst7
+pdb_sys_2=a1ar-ado-sys.pdb
+nb_prot_2=4751
+parm_prot_2=a1ar-ado-pro.parm7
+pdb_prot_2=a1ar-ado-pro.pdb
+res_idx_2=2-208,210-282    # TO KEEP, SEPARATED BY COMMAS
+parm_cmap_2=a1ar-ado-cmap.parm7
+pdb_cmap_2=a1ar-ado-cmap.pdb
+traj_cmap_2=a1ar-ado-cmap.nc
+
+total_prod_steps=20000
+stride=1
+
+#####################################################################
+#   (II) DEEP LEARNING                                              #
+#####################################################################
+cuDNN_lib=/usr/local/cuda-11.0/targets/x86_64-linux/lib/
+dl_dir=./EXAMPLE/DL/a1ar-activation
+
+sys_fold_1=1-a1ar-psb36
+sys_img_1=a1ar-psb36
+
+sys_fold_2=2-a1ar-ado
+sys_img_2=a1ar-ado
+
+nb_residues=280
+image_index=38    # USED TO DETERMINE REACTION COORDINATES
+gradient_cutoff=0.4
+
+#####################################################################
+#   (III) 2D FREE ENERGY PROFILING                                  #
+#####################################################################
