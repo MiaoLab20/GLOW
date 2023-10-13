@@ -4,11 +4,11 @@ GLOW integrates Gaussian accelerated molecular dynamics (GaMD) and Deep Learning
 
 # Downloads
 
-1. Anaconda3 (version 2021.05 or later): Anaconda3-2021.05-Linux-x86_64
+<strong>1. Anaconda3 (version 2021.05 or later): <a href="https://www.anaconda.com/products/individual#linux">Anaconda3-2021.05-Linux-x86_64</a></strong>
 
-2. Full GLOW package (with manual and a testing "EXAMPLE" folder): GLOW.zip
+<strong>2. Full GLOW package (with manual and a testing "EXAMPLE" folder): <span style="color: #ff0000;"><a href="https://www.med.unc.edu/pharm/miaolab/wp-content/uploads/sites/1385/2023/09/GLOW.zip">GLOW.zip</a></span></strong>
 
-3. Energetic reweighting:  PyReweighting
+<strong>3. Energetic reweighting: <a href="https://www.med.unc.edu/pharm/miaolab/resources/pyreweighting/">PyReweighting</a> </strong>
 
 # Tutorial
 
